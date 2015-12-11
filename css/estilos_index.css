@@ -64,8 +64,8 @@ body {
 }
 
 .h2-cartelera {
-	text-align: left;
 	color: #666666;
+	font-size: 35px;
 	margin-bottom: 25px;
 }
 
@@ -79,11 +79,11 @@ body {
 }
 
 .a-poster {
-	color: #aaaaaa;
+	color: #666666;
 }
 
-.h5-poster { 
-	color: #666666;
+.a-poster:hover {
+	color: #740001;
 }
 
 a:hover {
@@ -108,8 +108,12 @@ a:active {
 	margin-bottom: 40px;
 }
 
-.h5-estrenos {
+.a-estreno {
 	color: #666666;
+}
+
+.a-estreno:hover {
+	color: #333333;
 }
 
 /* Footer */

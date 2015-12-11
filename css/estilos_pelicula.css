@@ -21,54 +21,45 @@ a:hover {
 	margin: 0px auto;
 }
 
-/*Menu principal */
-
-.logo {
-	padding: 10px;
-	margin-bottom: 0px;
-}
-
-.navbar { 
-	margin-bottom: 0px ; /*Eliminar separación entre el navbar y el carrusel*/
-	-webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49);
-	-moz-box-shadow:    0px 3px 5px rgba(100, 100, 100, 0.49);
-	box-shadow:         0px 3px 5px rgba(100, 100, 100, 0.49);
-}
-
-.form-menu {
-    text-align: center;
-    margin-top: 40px;    
-}
-
-.combo-menu {
-	height: 50px;
-	margin-bottom: 5px;
-	margin-right: 5px;
-	font-size: large;
-	background-color: #eeba30;
-	color: white;
-	border-radius: 25px;
-}
-
-.boton-menu {
-	height: 50px;
-	margin-bottom: 5px;
-	font-size: large;
-	background-color: #ae0001;
-	color: white;
-	border-radius: 25px;
-}
-
 /* Info pelicula */
+
+.h1-titulo-pelicula {
+	color: #ae0001;
+}
 
 .div-info-pelicula {
 	margin-top: 50px;
 	margin-bottom: 50px;
 }
 
+.h3-sinopsis {
+	color: #777777;
+}
+
 .p-sinopsis {
 	text-align: justify;
 	color: #777777;
+}
+
+.boton-trailer {
+	display: block;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	padding:5px;
+	font-size: large;
+	text-align: center;
+	color: #008000;
+	background: white;
+	border-style: solid;
+	border-radius: 2px;
+	border-radius: 10px;
+	border-color: #008000;
+}
+
+.boton-trailer:hover {
+	background: white;
+	border-color: #7fbf7f;
+	color: #4ca64c;
 }
 
 .titulo-info {
@@ -81,41 +72,9 @@ a:hover {
 	color: #777777;
 }
 
-
-/* Footer */
-
-.row-footer {
-	padding-bottom: 5%;
-	background-color: #333333;
-}
-
-.h3-footer {
-	color: #eeeeee;
-}
-
-.a-footer {
-	color: #eeba30;
-	display: block;
-}
-
-.a-footer:hover {
-	color: #d3a625;
-}
-
-.a-footer:active {
-    color: #eeba30;
-}	
-
-.div-footer {
-	padding-left: 10%;
-}
-
-.icon-redes-footer {
-	padding: 0px;
-	margin: 0px auto;
-	display: inline-block;
-}
-
-.texto-footer{
-	text-align: center;
+.columna-info {
+	border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: #c0c0c0;
 }
