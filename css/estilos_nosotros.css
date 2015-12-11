@@ -1,27 +1,37 @@
-.h1-contacto {
+.h1-nosotros {
 	margin-top: 30px;
 	font-size: 40px;
 	color: #ae0001;
 }
 
-.h4-contacto {
-	color: #666666;
-	margin-bottom: 50px;
+.h2-nosotros {
+	font-size: 27px;
+    font-weight: bold;
 }
 
-.btn-enviar-letra
-{
-	font-weight: bold;
-}
-
-.separa-form
-{
-	margin-bottom: 15%;
+.texto-justificado {
+	color: #818386;
+	text-align: justify;
 }
 
 .separa-hruler
 {
 	margin-bottom: 5%;
+}
+
+.to-right
+{
+	text-align: right;
+}
+
+.separa-img
+{
+	margin-bottom: 3%;
+}
+
+.separa-fondo
+{
+	margin-bottom: 12%;
 }
 
 body {
