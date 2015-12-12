@@ -1,3 +1,4 @@
+
 CREATE TABLE IF NOT EXISTS `ciudad`
 (
 	`id` int NOT NULL,
@@ -20,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `pelicula`
 	`titulo` varchar(60) NOT NULL,
 	`idioma` varchar(30) NOT NULL,
 	`estreno` int NOT NULL,
-	`año` int NOT NULL,
+	`anio` int NOT NULL,
 	`fecha` varchar(20) NOT NULL,
 	`clasificacion` varchar(5) NOT NULL,
 	`genero` varchar(30) NOT NULL,
@@ -58,7 +59,7 @@ INSERT INTO `sucursal` (`id`,`nombre`,`id_ciudad`) VALUES
 (6, 'CineSuyu - Santa Rosa', 3);
 
 
-INSERT INTO `pelicula` (`id`, `titulo`, `idioma`, `estreno`, `año`, `fecha`,`clasificacion`, `genero`, `duracion`, `horarios`, `director`, `reparto`, `sinopsis`, `ruta`) VALUES
+INSERT INTO `pelicula` (`id`, `titulo`, `idioma`, `estreno`, `anio`, `fecha`,`clasificacion`, `genero`, `duracion`, `horarios`, `director`, `reparto`, `sinopsis`, `ruta`) VALUES
 (1, 'Avatar', 'Ingles', 0, 2009, '24/11/2009','B-15', 'Ciencia ficcion', '161 min', '1:00p.m. 5:30p.m. 9:45p.m. 11:00p.m.', 'James Cameron', 'Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang, Michelle Rodriguez, Giovanni Ribisi, Joel David Moore, Wes Studi, CCH Pounder, Laz Alonso, Dileep Rao', 'Año 2154. Jake Sully (Sam Worthington), un ex-marine condenado a vivir en una silla de ruedas, sigue siendo, a pesar de ello, un autentico guerrero...','avatar.jpg'),
 (2, 'Titanic', 'Español', 0, 1997,'10/08/1997','B', 'Romance', '195 min', '12:10p.m. 3:30p.m. 7:15p.m. 10:00p.m.', 'James Cameron', 'Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Frances Fisher, Gloria Stuart, Bill Paxton, Bernard Hill, David Warner, Victor Garber, Jonathan Hyde, Suzy Amis, Danny Nucci', 'Jack (DiCaprio), un joven artista, gana en una partida de cartas un pasaje para viajar a America en el Titanic, el transatlantico mas grande y seguro jamas construido...','titanic.jpg'),
 (3, 'Forrest Gump', 'Español', 0, 1994, '07/10/1994','A','Comedia', '142 min', '2:20p.m. 4:40p.m. 9:10p.m. 10:50p.m.', 'Robert Zemeckis', 'Tom Hanks, Robin Wright, Gary Sinise, Mykelti Williamson, Sally Field, Rebecca Williams, Michael Conner Humphreys, Harold G. Herthum, Haley Joel Osment', 'Forrest Gump (Tom Hanks) sufre desde pequeño un cierto retraso mental. A pesar de todo, gracias a su tenacidad y a su buen corazon sera protagonista de acontecimientos cruciales de su pais...','gump.jpg'),
@@ -118,5 +119,4 @@ INSERT INTO `sucursalpelicula` (`id_sucursal`, `id_pelicula`) VALUES
 (6, 6),
 (6, 4),
 (6, 1),
-(6, 2),
-(6, 3);
+(6, 2);

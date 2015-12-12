@@ -4,6 +4,11 @@
 	color: #ae0001;
 }
 
+.error-focus:focus
+{
+    box-shadow: 0 0 10px red;
+}
+
 .h4-contacto {
 	color: #666666;
 	margin-bottom: 50px;

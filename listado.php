@@ -101,7 +101,7 @@
 						while($obj2 = mysqli_fetch_object($result2)) {
 				?>
 				<div class="col-lg-5 col-lg-offset-2 col-md-6 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 div-elemento">
-					<a href="google.com">
+					<a href="pelicula.php?id=<?php echo $obj2->id."&titulo=".$obj2->titulo."&sinopsis=".$obj2->sinopsis."&duracion=".$obj2->duracion."&clasificacion=".$obj2->clasificacion."&genero=".$obj2->genero."&director=".$obj2->director."&reparto=".$obj2->reparto."&idioma=".$obj2->idioma."&anio=".$obj2->anio."&ruta=".$obj2->ruta?>">
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 							<img class="img-responsive img-rounded imagen-centrada" src="images/posters/<?php echo $obj2->ruta; ?>" alt="<?php echo $obj2->ruta; ?>" width="190" height="280">
 						</div>
