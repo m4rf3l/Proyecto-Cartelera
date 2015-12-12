@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/estilos_navbar_footer.css">
 	<link rel="stylesheet" type="text/css" href="css/estilos_contacto.css">
 	<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+	<script src="js/validaContacto.js"></script>
 	<style>
 	.carousel-inner > .item > img,
 	.carousel-inner > .item > a > img {
@@ -56,36 +57,38 @@
 			</div>
 		</div>
 		<div class="row separa-form">
-			<form method="post" action="">
+			<form method="post" action="datos/comentarios.php" name="formContacto" onsubmit="return validarContacto()">
 				<div class="form-group col-xs-8 col-md-4 col-xs-offset-2">
 					<label for="nombre">Nombre(s):* </label>
-					<input name="nombre" type="text" class="form-control" placeholder="Teclea tu nombre">
+					<input id="nombre" name="nombre" type="text" class="form-control" placeholder="Teclea tu nombre">
 				</div>
 				<div class="form-group col-xs-8 col-md-4 col-xs-offset-2 col-md-offset-0">
 					<label for="apellido">Apellido(s):* </label>
-					<input name="apellido" type="text" class="form-control" placeholder="Teclea tu apellido">
+					<input id="apellido" name="apellido" type="text" class="form-control" placeholder="Teclea tu apellido">
 				</div>
 				<div class="col-xs-8 col-xs-offset-2">
 					<div class="form-group">
-						<label for="destino">Para sucursal:* </label>
-						<select name="destino" id="" class="form-control">
-							<option value="1">Culiacán</option>
-							<option value="2">Los Mochis</option>
-							<option value="3">Navolato</option>
-							<option value="4">Mazatlán</option>
-							<option value="5">Guasave</option>
+						<label for="sucursal">Para sucursal:* </label>
+						<select name="sucursal" id="sucursal" class="form-control">
+							<option value="">Seleccione una sucursal</option>
+							<option value="1">CineSuyu - Zapata</option>
+							<option value="2">CineSuyu - La Lomita</option>
+							<option value="3">CineSuyu - La Playita</option>
+							<option value="4">CineSuyu - Pescado</option>
+							<option value="5">CineSuyu - Del Olmo</option>
+							<option value="6">CineSuyu - Santa Rosa</option>
 						</select>
 					</div>
 					<div class="form-group">
 						<label for="asunto">Asunto:* </label>
-						<input name="asunto" type="text" class="form-control" placeholder="Teclea tu asunto">
+						<input id="asunto" name="asunto" type="text" class="form-control" placeholder="Teclea tu asunto">
 					</div>
 					<div class="form-group">
-						<label for="comentarios">Comentarios:* </label>
-						<textarea name="comentarios" id="" cols="30" rows="7" placeholder="Deja tus comentarios" class="form-control"></textarea>
+						<label for="comentario">Comentarios:* </label>
+						<textarea name="comentario" id="comentario" cols="30" rows="7" placeholder="Deja tus comentarios" class="form-control"></textarea>
 					</div>
 					<div class="form-group">
-						<button type="submit" class="btn btn-success btn-lg btn-enviar-letra">Enviar mensaje</button>
+						<input type="submit" value="Enviar mensaje" class="btn btn-success btn-lg btn-enviar-letra">
 					</div>
 				</div>
 			</form>	
