@@ -17,6 +17,10 @@
     margin-top: 40px;
 }
 
+.div-combo {
+	display: inline-block;
+}
+
 .combo-menu {
 	height: 50px;
 	margin-bottom: 5px;
