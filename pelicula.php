@@ -41,30 +41,32 @@
 			<div class="row">
 				<div class="col-xs-12 div-info-pelicula">
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-						<img class="img-responsive img-rounded imagen-centrada" src="images/posters/<?php echo $_GET["ruta"]; ?>" alt="poster" width="190" height="280">
+						
+						<img class="img-responsive img-rounded imagen-centrada" name="ruta" src="images/posters/<?php echo $_GET["ruta"]; ?>" alt="poster" width="190" height="280">
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-						<h1 class="h1-titulo-pelicula"><?php echo $_GET["titulo"]; ?></h1>
+						<h1 class="h1-titulo-pelicula" name="titulo" value=""><?php echo $_GET["titulo"]; ?></h1>
 						<h3 class="h3-sinopsis">Sinopsis</h3>
-						<p class="p-sinopsis" name="sinopsis" value="<?php echo $_GET["sinopsis"]; ?>">
+						<p class="p-sinopsis" name="sinopsis" value="">
+							<?php echo $_GET["sinopsis"]; ?>
 						</p>
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 columna-info">
 						<a class="boton-trailer" href="http://www.youtube.com" target="_blank">Ver Trailer</a>
 						<h5 class="titulo-info">Duración:<h5>
-						<h4 class="valor-info" name="duracion" value="<?php echo $_GET["duracion"]; ?>"></h4>
+						<h4 class="valor-info" name="duracion" value=""><?php echo $_GET["duracion"]; ?></h4>
 						<h5 class="titulo-info">Clasificación:<h5>
-						<h4 class="valor-info" name="clasificacion" value="<?php echo $_GET["clasificacion"]; ?>"></h4>
+						<h4 class="valor-info" name="clasificacion" value=""><?php echo $_GET["clasificacion"]; ?></h4>
 						<h5 class="titulo-info">Género:<h5>
-						<h4 class="valor-info"name="genero" value="<?php echo $_GET["genero"]; ?>"></h4>
+						<h4 class="valor-info"name="genero" value=""><?php echo $_GET["genero"]; ?></h4>
 						<h5 class="titulo-info">Director:<h5>
-						<h4 class="valor-info" name="director" value="<?php echo $_GET["director"]; ?>"></h4>
+						<h4 class="valor-info" name="director" value=""><?php echo $_GET["director"]; ?></h4>
 						<h5 class="titulo-info">Reparto:<h5>
-						<h4 class="valor-info" name="reparto" value="<?php echo $_GET["reparto"]; ?>"></h4>
+						<h4 class="valor-info" name="reparto" value=""><?php echo $_GET["reparto"]; ?></h4>
 						<h5 class="titulo-info">Idioma:<h5>
-						<h4 class="valor-info" name="idioma" value="<?php echo $_GET["idioma"]; ?>"></h4>
+						<h4 class="valor-info" name="idioma" value=""><?php echo $_GET["idioma"]; ?></h4>
 						<h5 class="titulo-info">Año:<h5>
-						<h4 class="valor-info" name="año" value="<?php echo $_GET["año"]; ?>"></h4>
+						<h4 class="valor-info" name="anio" value=""><?php echo $_GET["anio"]; ?></h4>
 					</div>
 				</div>
 			</div>	
