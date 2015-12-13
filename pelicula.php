@@ -13,27 +13,27 @@
 			<div class="row">
 				<nav class="navbar">
 					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"> 
-					    <a href="index.html">
-					    	<img class="img-responsive imagen-centrada logo" src="images/logo.png" alt="Logo empresa">
-					    </a>
+						<a href="index.html">
+							<img class="img-responsive imagen-centrada logo" src="img/logo.png" alt="Logo empresa">
+						</a>
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">      	
 						<form class="navbar-form form-menu" role="search">
-				  			<div class="form-group">
-				    			<select class="form-control combo-menu">
-					    			<option value="">Seleccione una ciudad</option>
-					  				<option value="">Culiacán</option>
-					  				<option value="">Mazatlán</option>
-					  				<option value="">Los Mochis</option>
-				    			</select>	
-				    			<select class="form-control combo-menu">
-					    			<option value="">Seleccione un cine</option>
-					  				<option value="">Cine 1</option>
-					  				<option value="">Cine 2</option>
-					  				<option value="">Cine 3</option>
-				    			</select>	
-				  			</div>
-			  				<button type="submit" class="boton-menu btn btn-danger">Ver cartelera</button>
+							<div class="form-group">
+								<select class="form-control combo-menu">
+									<option value="">Seleccione una ciudad</option>
+									<option value="">Culiacán</option>
+									<option value="">Mazatlán</option>
+									<option value="">Los Mochis</option>
+								</select>	
+								<select class="form-control combo-menu">
+									<option value="">Seleccione un cine</option>
+									<option value="">Cine 1</option>
+									<option value="">Cine 2</option>
+									<option value="">Cine 3</option>
+								</select>	
+							</div>
+							<button type="submit" class="boton-menu btn btn-danger">Ver cartelera</button>
 						</form>
 					</div>	
 				</nav>
@@ -41,8 +41,18 @@
 			<div class="row">
 				<div class="col-xs-12 div-info-pelicula">
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-						
-						<img class="img-responsive img-rounded imagen-centrada" name="ruta" src="images/posters/<?php echo $_GET["ruta"]; ?>" alt="poster" width="190" height="280">
+						<?php 
+							$estreno = $_GET["estreno"];
+							if($estreno == 1) {
+						?>
+						<img class="img-responsive img-rounded imagen-centrada" name="ruta" src="img/estrenos/<?php echo $_GET["ruta"]; ?>" alt="poster" width="190" height="280">
+						<?php
+							} else {
+						?>
+						<img class="img-responsive img-rounded imagen-centrada" name="ruta" src="img/posters/<?php echo $_GET["ruta"]; ?>" alt="poster" width="190" height="280">
+						<?php
+							}
+						?>	
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 						<h1 class="h1-titulo-pelicula" name="titulo" value=""><?php echo $_GET["titulo"]; ?></h1>
@@ -52,7 +62,7 @@
 						</p>
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 columna-info">
-						<a class="boton-trailer" href="http://www.youtube.com" target="_blank">Ver Trailer</a>
+						<a class="boton-trailer" href="<?php echo $_GET["trailer"]; ?>" target="_blank">Ver Trailer</a>
 						<h5 class="titulo-info">Duración:<h5>
 						<h4 class="valor-info" name="duracion" value=""><?php echo $_GET["duracion"]; ?></h4>
 						<h5 class="titulo-info">Clasificación:<h5>
@@ -85,37 +95,37 @@
 					<h3 class="h3-footer">Redes sociales</h3>
 					<div class="col-lg-2 icon-redes-footer">
 						<a href="http://www.facebook.com" target="_blank">
-							<img class="img-responsive" src="images/icons/facebook.png" 
-							onmouseover="this.src='images/icons/facebook_hover.png'"
-							onmouseout="this.src='images/icons/facebook.png'"alt="Logo empresa">
+							<img class="img-responsive" src="img/icons/facebook.png" 
+							onmouseover="this.src='img/icons/facebook_hover.png'"
+							onmouseout="this.src='img/icons/facebook.png'"alt="Logo empresa">
 						</a>
 					</div>
 					<div class="col-lg-2 icon-redes-footer">
 						<a href="http://www.twitter.com" target="_blank">
-							<img class="img-responsive" src="images/icons/twitter.png" alt="Logo empresa"
-							onmouseover="this.src='images/icons/twitter_hover.png'"
-							onmouseout="this.src='images/icons/twitter.png'"alt="Logo empresa" >
+							<img class="img-responsive" src="img/icons/twitter.png" alt="Logo empresa"
+							onmouseover="this.src='img/icons/twitter_hover.png'"
+							onmouseout="this.src='img/icons/twitter.png'"alt="Logo empresa" >
 						</a>
 					</div>
 					<div class="col-lg-2 icon-redes-footer">
 						<a href="http://www.plus.google.com" target="_blank">
-							<img class="img-responsive" src="images/icons/google.png" alt="Logo empresa" 
-							onmouseover="this.src='images/icons/google_hover.png'"
-							onmouseout="this.src='images/icons/google.png'" alt="Logo empresa">
+							<img class="img-responsive" src="img/icons/google.png" alt="Logo empresa" 
+							onmouseover="this.src='img/icons/google_hover.png'"
+							onmouseout="this.src='img/icons/google.png'" alt="Logo empresa">
 						</a>	
 					</div>
 					<div class="col-lg-2 icon-redes-footer">
 						<a href="http://www.instagram.com" target="_blank">
-							<img class="img-responsive" src="images/icons/instagram.png" alt="Logo empresa"
-							onmouseover="this.src='images/icons/instagram_hover.png'"
-							onmouseout="this.src='images/icons/instagram.png'"alt="Logo empresa">
+							<img class="img-responsive" src="img/icons/instagram.png" alt="Logo empresa"
+							onmouseover="this.src='img/icons/instagram_hover.png'"
+							onmouseout="this.src='img/icons/instagram.png'"alt="Logo empresa">
 						</a>
 					</div>
 					<div class="col-lg-2 icon-redes-footer">
 						<a href="http://www.youtube.com" target="_blank">
-							<img class="img-responsive" src="images/icons/youtube.png" alt="Logo empresa"
-							onmouseover="this.src='images/icons/youtube_hover.png'"
-							onmouseout="this.src='images/icons/youtube.png'"alt="Logo empresa">
+							<img class="img-responsive" src="img/icons/youtube.png" alt="Logo empresa"
+							onmouseover="this.src='img/icons/youtube_hover.png'"
+							onmouseout="this.src='img/icons/youtube.png'"alt="Logo empresa">
 						</a>
 					</div>
 				</div>		
