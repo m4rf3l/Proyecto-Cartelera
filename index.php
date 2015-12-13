@@ -173,7 +173,7 @@
 			<div class="row row-footer">
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 div-footer">
 					<h3 class="h3-footer">Acerca de nosotros</h3>
-					<a class="a-footer" href="nosotros.html">Nosotros</a>
+					<a class="a-footer" href="nosotros.php">Nosotros</a>
 					<a class="a-footer" href="http://www.w3schools.com">Términos y condiciones</a>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 div-footer">

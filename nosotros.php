@@ -7,41 +7,75 @@
 		<link rel="stylesheet" type="text/css" href="css/estilos_navbar_footer.css">
 		<link rel="stylesheet" type="text/css" href="css/estilos_nosotros.css">
 		<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
-		<style>
-			.carousel-inner > .item > img,
-			.carousel-inner > .item > a > img {
-				width: 100%;
-				margin: auto;
-				max-height: 450px;
-			}
-		</style>
+		<!--Script para validar que en ambos combos haya seleccion -->
+		<script type="text/javascript" src="js/validacion_combos.js"></script>
+		<!--Script para llenar el combos de los cines-->
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#ciudades').change(function(){
+					var id=$('#ciudades').val();
+					$('#sucursalesdiv').load('datos/llenar_sucursales.php?id='+id);
+				});    
+			});
+		</script>
 	</head>
 	<body>
+		<!--Conexion y consulta a la BD -->
+		<?php
+			$server = "localhost"; 
+			$user = "root";
+			$password = "";
+			$bd = "cartelera";
+
+			//Conexion
+			$conexion = new mysqli($server, $user, $password, $bd);
+
+			//Verificar conexion
+			if ($conexion -> connect_error) {
+				print("Error en la conexión a la Base de Datos");
+			}
+
+			mysqli_query ($conexion,"SET NAMES 'utf8'");
+
+			//Consulta para el combo de ciudades
+			$sql = "SELECT * FROM ciudad ORDER BY nombre ASC";
+			$result = $conexion -> query($sql);	
+
+			
+		?>
 		<div class="container">
 			<div class="row">
 				<nav class="navbar">
 					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"> 
-						<a href="index.html">
+						<a href="index.php">
 							<img class="img-responsive imagen-centrada logo" src="img/logo.png" alt="Logo empresa">
 						</a>
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">      	
-						<form class="navbar-form form-menu" role="search">
+						<form class="navbar-form form-menu" action="listado.php" method="GET" onsubmit="return validarCombos()">
 							<div class="form-group">
-								<select class="form-control combo-menu">
-									<option value="">Seleccione una ciudad</option>
-									<option value="">Culiacán</option>
-									<option value="">Mazatlán</option>
-									<option value="">Los Mochis</option>
-								</select>	
-								<select class="form-control combo-menu">
-									<option value="">Seleccione un cine</option>
-									<option value="">Cine 1</option>
-									<option value="">Cine 2</option>
-									<option value="">Cine 3</option>
-								</select>	
+								<div class="div-combo">
+									<select name="ciudades" id="ciudades" class="form-control combo-menu">
+										<option value="">Seleccione una ciudad</option>
+										<?php 
+											if($result) {
+												while($obj = mysqli_fetch_object($result)) { 			
+													?>
+													<option value="<?php echo $obj->id; ?>"><?php echo $obj->nombre; ?></option>
+													<?php  
+												}
+											} 
+										?>			
+									</select>	
+								</div>	
+								<div class="div-combo" id="sucursalesdiv">
+									<select name="sucursales" id="sucursales" class="form-control combo-menu">
+										<option value="">Seleccione un cine</option>
+									</select>
+								</div>	
+								<button type="submit" class="btn btn-default boton-menu btn btn-danger">Ver cartelera</button>
 							</div>
-							<button type="submit" class="btn btn-default boton-menu btn btn-danger">Ver cartelera</button>
 						</form>
 					</div>	
 				</nav>
@@ -87,12 +121,12 @@
 			<div class="row row-footer">
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 div-footer">
 					<h3 class="h3-footer">Acerca de nosotros</h3>
-					<a class="a-footer" href="http://www.w3schools.com">Nosotros</a>
+					<a class="a-footer" href="nosotros.php">Nosotros</a>
 					<a class="a-footer" href="http://www.w3schools.com">Términos y condiciones</a>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 div-footer">
 					<h3 class="h3-footer">Contacto</h3>
-					<a class="a-footer" href="http://www.w3schools.com">Dejanos tus comentarios</a>
+					<a class="a-footer" href="contacto.php">Dejanos tus comentarios</a>
 					<a class="a-footer">01 800 56 56 56</a>
 				</div>	
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 div-footer">
@@ -138,7 +172,7 @@
 				<div class="container">
 					<p class="texto-footer"><small>©Copyrigth 2015. Todos los derechos reservados a Cinesuyu®</small></p>
 				</div>	
-			</div>	
+			</div>
 		</div>	
 	</body>
 </html>
